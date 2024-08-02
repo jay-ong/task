@@ -12,7 +12,6 @@ def scrape_movie():
     return movies
 
 def scrape_gogoflix():
-    print('red')
     url = "https://gogoflix.pro/"
     endpoint = url.rsplit("/", 1)[0]
     response = requests.get(url)
@@ -45,12 +44,10 @@ def scrape_gogoflix():
             'total_items': len(movie_items),
             'items': movie_items
         }
-        print('----yellow---')
         Movie.objects.create(**scraped_data)
 
         return movie_items
     else:
-        print('---blue---')
         scraped_data['success'] = False
         scraped_data['status'] = 'failed'
         scraped_data['result'] = {}
