@@ -1,0 +1,12 @@
+services:
+  react-app:
+    build:
+      context: ./app
+    ports:
+      - '3000:3000'
+
+  django-app:
+    build:
+      context: ./api
+    ports:
+      - '8000:8000'
