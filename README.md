@@ -5,6 +5,7 @@ The Django application scrapes data from [https://gogoflix.pro] and [https://fmo
 
 ### Requirement:
  - docker
+ - docker-compose
 
 ### Installation:
  - Clone repository [https://github.com/jay-ong/task]
