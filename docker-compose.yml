@@ -2,11 +2,13 @@ services:
   react-app:
     build:
       context: ./app
+    image: task-react-app:latest
     ports:
       - '3000:3000'
 
   django-app:
     build:
       context: ./api
+    image: task-django-app:latest
     ports:
       - '8000:8000'
